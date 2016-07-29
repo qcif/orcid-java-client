@@ -2,7 +2,7 @@ language: java
 script:
 - mvn clean package -Dmaven.test.skip=true
 after_success:
-- mvn --settings travis-settings.xml -DskipTests=true deploy
+- mvn --settings travis-settings.xml -DskipTests=true -Dmaven.site.deploy.skip=true deploy
 env:
   global:
   - secure: xM4n0YhvxqGFqh7psvP+n840hBgRpJ04mCYnoKB4dBIcXpN9W2NZa20cX3J+tyHA8PueG5xvoNWdfT0+HfsblhwgwMyRhWP0O15wr/S1bqf5XntZrfQNJT/1axp11Ci11jM7Z4amvIUuDYeD5y35w0qtaOW6zZopPc9653VReccvcRbQ3RhSjScU+jGOLOXp75mMYQVFm0r2xASPRktp2VtTLhonaOGfRHbD71+OXvk+/mZHGnJ4pWz1SZVMvB1ZApen1gUF8N2stU+KvJboSyIQLGKn3+cyIhxqZ1KyzWWXA40S3hUSY2Ru75BNCvXpR8l5hOTvnTTBdHvrJXZOTrukxOT51M0hy7d2aBWP6A3D02L4333Xy+LiK23TakNskJ3NcrIg+7wWBQgmdiCmyKkc740/v0czKq35N8LIsi3+7tiAnXeGLOj5DbOnBokDPl2YDWvwgRizok6afFCk3mJJAwLGmRRyL8JIFnBNX6YFSZwswxkCtFzQD+R/KAckAT7esgt8Ofwi4xVzJASUdZvOpFA1avznO1OhDR947yQ0bx8ZtzEaATeMIj8Hs2sSSl104dwCY9BArGEkwICh+nQeIknyIoTi4U0fjCFd2RRz08jqN2Uyog9MilZkHbY4VRW97iqJhrG4vPKokn7UbyvCb+iMVD7FcRCIC6LPHDM=
