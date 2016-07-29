@@ -4,7 +4,7 @@
   <groupId>uk.bl</groupId>
   <artifactId>orcid-java-client</artifactId>
   <packaging>jar</packaging>
-  <version>0.12.2</version>
+  <version>0.12.2-SNAPSHOT</version>
   <name>Orcid Java Client</name>
 
 	<properties>
@@ -87,11 +87,11 @@
     use 'mvn clean deploy' to push to maven repo -->
     
 	<distributionManagement>
-	    <repository>
-	        <id>internal.repo</id>
-	        <name>Temporary Staging Repository</name>
-	        <url>file://${project.build.directory}/mvn-repo</url>
-	    </repository>
+		<snapshotRepository>
+			<id>redbox-nexus-snapshots</id>
+			<name>Redbox Nexus Snapshots</name>
+			<url>http://dev.redboxresearchdata.com.au/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
 	</distributionManagement>
 
     <build>
