@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>uk.bl</groupId>
+  <groupId>com.redboxresearchdata.com.au</groupId>
   <artifactId>orcid-java-client</artifactId>
   <packaging>jar</packaging>
   <version>0.12.2-SNAPSHOT</version>
@@ -9,8 +9,8 @@
 
 	<properties>
 	    <!-- edition doesn't matter for compile -->
-		<restlet.edition>gae</restlet.edition>
-		<restlet.version>2.2-M6</restlet.version>
+		<restlet.edition>jee</restlet.edition>
+		<restlet.version>2.3.7</restlet.version>
 		<github.global.server>github</github.global.server>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties> 
@@ -59,13 +59,13 @@
 		<scope>provided</scope>
 	</dependency>
 
-    <dependency>
+    <!-- <dependency>
        <groupId>org.restlet.${restlet.edition}</groupId>
        <artifactId>org.restlet.ext.net</artifactId>
 		<version>${restlet.version}</version>
 		<optional>true</optional>
 		<scope>provided</scope>
-	</dependency>
+	</dependency> -->
     
     <dependency>
       <groupId>junit</groupId>
