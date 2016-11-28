@@ -1,91 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>au.com.redboxresearchdata</groupId>
-  <artifactId>orcid-java-client</artifactId>
-  <packaging>jar</packaging>
-  <version>0.12.2-SNAPSHOT</version>
-  <name>Orcid Java Client</name>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>au.com.redboxresearchdata</groupId>
+	<artifactId>orcid-java-client</artifactId>
+	<packaging>jar</packaging>
+	<version>0.12.2-SNAPSHOT</version>
+	<name>Orcid Java Client</name>
 
 	<properties>
-	    <!-- edition doesn't matter for compile -->
+		<!-- edition doesn't matter for compile -->
 		<restlet.edition>jee</restlet.edition>
 		<restlet.version>2.3.7</restlet.version>
 		<github.global.server>github</github.global.server>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties> 
-	
+	</properties>
+
 	<licenses>
-	    <license>
-	      <name>The Apache Software License, Version 2.0</name>
-	      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-	      <distribution>repo</distribution>
-	    </license>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
 	</licenses>
-    
-      <repositories>
-        <repository>
-           <id>maven-restlet</id>
-           <name>Public online Restlet repository</name>
-           <url>http://maven.restlet.org</url>
-        </repository>
-    </repositories>
-    
-    <dependencies>
-	
-	<dependency>
-		<groupId>javax.inject</groupId>
-		<artifactId>javax.inject</artifactId>
-		<version>1</version>
-	</dependency>
-    <dependency>
-	    <groupId>com.google.guava</groupId>
-	    <artifactId>guava</artifactId>
-	    <version>15.0</version>
-    </dependency>
 
-	<dependency>
-		<groupId>com.fasterxml.jackson.core</groupId>
-		<artifactId>jackson-databind</artifactId>
-		<version>2.1.0</version>
-	</dependency>
-    
-    <!-- users of this artifact MUST include their own restlet depdendencies -->
-	<dependency>
-		<groupId>org.restlet.${restlet.edition}</groupId>
-		<artifactId>org.restlet</artifactId>
-		<version>${restlet.version}</version>
-		<optional>true</optional>
-		<scope>provided</scope>
-	</dependency>
+	<repositories>
+		<repository>
+			<id>maven-restlet</id>
+			<name>Public online Restlet repository</name>
+			<url>http://maven.restlet.org</url>
+		</repository>
+	</repositories>
 
-    <!-- <dependency>
-       <groupId>org.restlet.${restlet.edition}</groupId>
-       <artifactId>org.restlet.ext.net</artifactId>
-		<version>${restlet.version}</version>
-		<optional>true</optional>
-		<scope>provided</scope>
-	</dependency> -->
-    
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-    
-<dependency>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-java</artifactId>
-        <version>2.39.0</version>
-    </dependency>  
-    
-  </dependencies>
+	<dependencies>
 
-    <!-- the below will push the project to Github as a maven repository
-    thanks to: http://stackoverflow.com/questions/14013644/hosting-a-maven-repository-on-github 
-    use 'mvn clean deploy' to push to maven repo -->
-    
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>15.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+
+		<!-- users of this artifact MUST include their own restlet depdendencies -->
+		<dependency>
+			<groupId>org.restlet.${restlet.edition}</groupId>
+			<artifactId>org.restlet</artifactId>
+			<version>${restlet.version}</version>
+			<optional>true</optional>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- <dependency> <groupId>org.restlet.${restlet.edition}</groupId> <artifactId>org.restlet.ext.net</artifactId> 
+			<version>${restlet.version}</version> <optional>true</optional> <scope>provided</scope> 
+			</dependency> -->
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>2.39.0</version>
+		</dependency>
+
+	</dependencies>
+
+	<!-- the below will push the project to Github as a maven repository thanks 
+		to: http://stackoverflow.com/questions/14013644/hosting-a-maven-repository-on-github 
+		use 'mvn clean deploy' to push to maven repo -->
+
 	<distributionManagement>
 		<snapshotRepository>
 			<id>redbox-nexus-snapshots</id>
@@ -98,7 +95,13 @@
 			<url>http://dev.redboxresearchdata.com.au/nexus/content/repositories/releases/</url>
 		</repository>
 	</distributionManagement>
-	
-    <build>
-</build>
+
+	<build>
+	</build>
+	<scm>
+		<url>scm:git://github.com/qcif/orcid-java-client.git</url>
+		<connection>scm:git://github.com/qcif/orcid-java-client.git</connection>
+		<developerConnection>scm:git:https://github.com/qcif/orcid-java-client.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
 </project>
